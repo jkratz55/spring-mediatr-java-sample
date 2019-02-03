@@ -3,7 +3,6 @@ package io.jkratz.springmediatr.demo;
 import io.jkratz.mediator.core.Command;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
 public class CreateUserCommand implements Command {
 

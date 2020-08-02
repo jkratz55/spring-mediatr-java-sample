@@ -1,5 +1,6 @@
 package io.jkratz.springmediatr.demo;
 
+import io.jkratz.mediator.core.Mediator;
 import io.jkratz.mediator.core.RequestHandler;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Component;
@@ -10,9 +11,11 @@ import java.util.UUID;
 public class CreateUserRequestHandler implements RequestHandler<CreateUserRequest, UUID> {
 
 	private final UserRepository userRepository;
+	private final Mediator mediator;
 
-	public CreateUserRequestHandler(UserRepository userRepository) {
+	public CreateUserRequestHandler(UserRepository userRepository, Mediator mediator) {
 		this.userRepository = userRepository;
+		this.mediator = mediator;
 	}
 
 	@Override
@@ -21,6 +24,7 @@ public class CreateUserRequestHandler implements RequestHandler<CreateUserReques
 				createUserRequest.getEmail(),
 				createUserRequest.getPassword());
 		this.userRepository.save(user);
+		this.mediator.emitAsync(new UserCreatedEvent(user.getId()));
 		return user.getId();
 	}
 }

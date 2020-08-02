@@ -33,5 +33,5 @@ dependencies {
     runtimeOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     
-    implementation 'io.jkratz.springmediatr:spring-mediatr:1.0-RELEASE'
+    implementation 'io.jkratz.springmediatr:spring-mediatr:1.1-RELEASE'
 }

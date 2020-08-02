@@ -3,19 +3,17 @@ package io.jkratz.springmediatr.demo;
 import io.jkratz.mediator.core.CommandHandler;
 import io.jkratz.mediator.core.Mediator;
 import org.jetbrains.annotations.NotNull;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class CreateUserCommandHandler implements CommandHandler<CreateUserCommand> {
 
 	private final UserRepository userRepository;
+	private final Mediator mediator;
 
-	@Autowired
-	private Mediator mediator;
-
-	public CreateUserCommandHandler(UserRepository userRepository) {
+	public CreateUserCommandHandler(UserRepository userRepository, Mediator mediator) {
 		this.userRepository = userRepository;
+		this.mediator = mediator;
 	}
 
 	@Override

@@ -28,6 +28,14 @@ public class SampleController {
 		return ResponseEntity.ok().build();
 	}
 
+	@PostMapping("/commandAsync")
+	public CompletableFuture<ResponseEntity> runCommandAsync(@RequestBody CreateUserCommand command) {
+		return this.mediator.dispatchAsync(command)
+				.thenApply(nothing -> {
+					return ResponseEntity.ok().build();
+		});
+	}
+
 	@PostMapping("/request")
 	public ResponseEntity<?> runRequest(@RequestBody CreateUserRequest request) {
 		UUID id = this.mediator.dispatch(request);
@@ -36,7 +44,7 @@ public class SampleController {
 	}
 
 	@PostMapping("/requestAsync")
-	public CompletableFuture<ResponseEntity> runRequestAsync(@RequestBody SlowCreateUserRequest request) {
+	public CompletableFuture<ResponseEntity> runRequestAsync(@RequestBody CreateUserRequest request) {
 		return this.mediator.dispatchAsync(request)
 				.thenApply(id -> {
 					UriComponents uri = UriComponentsBuilder.fromPath("/user/{id}").buildAndExpand(id);

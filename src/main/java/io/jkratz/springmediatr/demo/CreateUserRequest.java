@@ -1,8 +1,8 @@
 package io.jkratz.springmediatr.demo;
 
-import io.jkratz.mediator.core.Request;
+import io.github.jkratz55.mediator.core.Request;
 
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotBlank;
 import java.util.UUID;
 
 public class CreateUserRequest implements Request<UUID> {

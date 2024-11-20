@@ -1,6 +1,6 @@
 package io.jkratz.springmediatr.demo;
 
-import io.jkratz.mediator.core.Event;
+import io.github.jkratz55.mediator.core.Event;
 
 import java.util.UUID;
 

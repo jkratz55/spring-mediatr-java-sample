@@ -1,9 +1,9 @@
 package io.jkratz.springmediatr.demo;
 
-import io.jkratz.mediator.core.Mediator;
-import io.jkratz.mediator.core.Registry;
-import io.jkratz.mediator.spring.SpringMediator;
-import io.jkratz.mediator.spring.SpringRegistry;
+import io.github.jkratz55.mediator.core.Mediator;
+import io.github.jkratz55.mediator.core.Registry;
+import io.github.jkratz55.mediator.spring.SpringMediator;
+import io.github.jkratz55.mediator.spring.SpringRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

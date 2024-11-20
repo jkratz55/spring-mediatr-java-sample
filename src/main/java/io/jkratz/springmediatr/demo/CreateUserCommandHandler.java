@@ -1,7 +1,7 @@
 package io.jkratz.springmediatr.demo;
 
-import io.jkratz.mediator.core.CommandHandler;
-import io.jkratz.mediator.core.Mediator;
+import io.github.jkratz55.mediator.core.CommandHandler;
+import io.github.jkratz55.mediator.core.Mediator;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Component;
 

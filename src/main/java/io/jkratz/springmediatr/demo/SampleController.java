@@ -1,6 +1,6 @@
 package io.jkratz.springmediatr.demo;
 
-import io.jkratz.mediator.core.Mediator;
+import io.github.jkratz55.mediator.core.Mediator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

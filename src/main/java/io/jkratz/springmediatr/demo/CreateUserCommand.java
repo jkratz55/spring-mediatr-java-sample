@@ -1,8 +1,8 @@
 package io.jkratz.springmediatr.demo;
 
-import io.jkratz.mediator.core.Command;
+import io.github.jkratz55.mediator.core.Command;
 
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotBlank;
 
 public class CreateUserCommand implements Command {
 

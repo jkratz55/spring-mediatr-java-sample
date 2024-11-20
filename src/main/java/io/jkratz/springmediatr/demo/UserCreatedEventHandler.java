@@ -1,6 +1,6 @@
 package io.jkratz.springmediatr.demo;
 
-import io.jkratz.mediator.core.EventHandler;
+import io.github.jkratz55.mediator.core.EventHandler;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
